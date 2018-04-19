@@ -29,7 +29,7 @@ public class Main implements Runnable {
     Socket soket = null, socket = null;
     BufferedReader reader = null, oku = null;
     BufferedWriter yaz = null;
-    String adres = null, url = null, server_ip = null;
+    String path = null, url = null, server_ip = null;
     char[] ip = new char[15];
     char[] port = new char[5];
     char[] karsilatirma = new char[11];
@@ -63,8 +63,8 @@ public class Main implements Runnable {
     private String[] dosyadanOku() {
         String[] dizi2 = new String[2];
         //adres = "C:\\Users\\MehmetSavasci\\Desktop\\socket.txt";
-        adres = "C:\\Users\\Duygu_Mehmet\\Desktop\\socket.txt";
-        file = new File(adres);
+        path = "C:\\Users\\Duygu_Mehmet\\Desktop\\socket.txt";
+        file = new File(path);
         sonuc = new String[2];
 
         if (file.exists()) {
@@ -113,8 +113,8 @@ public class Main implements Runnable {
 
     private void dosyayaYaz(String port, String ip) {
         //String adres = "C:\\Users\\MehmetSavasci\\Desktop\\socket.txt";
-        String adres = "C:\\Users\\Duygu_Mehmet\\Desktop\\socket.txt";
-        File file = new File(adres);
+        String path1 = "C:\\Users\\Duygu_Mehmet\\Desktop\\socket.txt";
+        File file = new File(path1);
         try {
             if (file.exists()) {
                 fw = new FileWriter(file, false);
